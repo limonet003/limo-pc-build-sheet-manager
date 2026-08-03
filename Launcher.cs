@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
-[assembly: AssemblyTitle("离墨电脑配件采集助手")]
+[assembly: AssemblyTitle("离墨电脑配置单管理助手")]
 [assembly: AssemblyDescription("离墨电脑配件型号主库、CPU盒装/散片、供应商报价、手动价格单与 Excel 报价单管理工具")]
 [assembly: AssemblyCompany("离墨")]
-[assembly: AssemblyProduct("离墨电脑配件采集助手")]
+[assembly: AssemblyProduct("离墨电脑配置单管理助手")]
 [assembly: AssemblyCopyright("© 2026 离墨。保留所有权利。")]
 [assembly: AssemblyVersion("2.4.0.0")]
 [assembly: AssemblyFileVersion("2.4.0.0")]
@@ -39,7 +39,7 @@ internal static class Backend
         string python = Path.Combine(Root, "runtime", "python.exe");
         string script = Path.Combine(Root, "backend.py");
         if (!File.Exists(python) || !File.Exists(script))
-            throw new Exception("程序文件不完整，请保留整个“离墨电脑配件采集助手”文件夹。");
+            throw new Exception("程序文件不完整，请保留整个“离墨电脑配置单管理助手”文件夹。");
         var start = new ProcessStartInfo
         {
             FileName = python,
@@ -110,7 +110,7 @@ internal sealed class SettingsForm : Form
 
     public SettingsForm()
     {
-        Text = "设置｜离墨电脑配件采集助手";
+        Text = "设置｜离墨电脑配置单管理助手";
         Size = new Size(740, 350);
         StartPosition = FormStartPosition.CenterParent;
         FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -183,7 +183,7 @@ internal sealed class BatchSearchForm : Form
 
     public BatchSearchForm(string initialQuery, string initialMode)
     {
-        Text = "批量搜索型号｜离墨电脑配件采集助手";
+        Text = "批量搜索型号｜离墨电脑配置单管理助手";
         Size = new Size(650, 510);
         StartPosition = FormStartPosition.CenterParent;
         Font = new Font("Microsoft YaHei UI", 10F);
@@ -246,7 +246,7 @@ internal sealed class MainForm : Form
 
     public MainForm()
     {
-        Text = "离墨电脑配件采集助手 2.4";
+        Text = "离墨电脑配置单管理助手 2.4";
         Size = new Size(1320, 920);
         MinimumSize = new Size(1120, 780);
         StartPosition = FormStartPosition.CenterScreen;
@@ -265,7 +265,7 @@ internal sealed class MainForm : Form
     {
         var header = new Panel { BackColor = navy, Dock = DockStyle.Top, Height = 105 };
         header.Controls.Add(new Label {
-            Text = "离墨电脑配件采集助手", ForeColor = Color.White, Font = new Font(Font.FontFamily, 22F, FontStyle.Bold),
+            Text = "离墨电脑配置单管理助手", ForeColor = Color.White, Font = new Font(Font.FontFamily, 22F, FontStyle.Bold),
             AutoSize = false, Size = new Size(650, 46), Location = new Point(28, 10), TextAlign = ContentAlignment.MiddleLeft
         });
         header.Controls.Add(new Label {
@@ -795,7 +795,7 @@ internal sealed class MainForm : Form
     {
         if (string.IsNullOrWhiteSpace(text)) return; logBox.AppendText(string.Format("[{0:HH:mm:ss}] {1}\r\n", DateTime.Now, text)); logBox.SelectionStart = logBox.TextLength; logBox.ScrollToCaret();
     }
-    private void Info(string text) { MessageBox.Show(this, text, "离墨电脑配件采集助手", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+    private void Info(string text) { MessageBox.Show(this, text, "离墨电脑配置单管理助手", MessageBoxButtons.OK, MessageBoxIcon.Information); }
     private void Error(Exception ex) { MessageBox.Show(this, ex.Message, "操作失败", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 }
 
@@ -837,7 +837,7 @@ internal static class Program
         catch (Exception ex)
         {
             if (args.Length >= 2 && args[0] == "--screenshot") File.WriteAllText(args[1] + ".error.txt", ex.ToString(), Encoding.UTF8);
-            else MessageBox.Show(ex.Message, "离墨电脑配件采集助手", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else MessageBox.Show(ex.Message, "离墨电脑配置单管理助手", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

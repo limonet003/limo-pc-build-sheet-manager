@@ -1,5 +1,5 @@
 param(
-    [string]$OutputPath = (Join-Path $PSScriptRoot 'dist\LimoPcQuoteAssistant.exe')
+    [string]$OutputPath = (Join-Path $PSScriptRoot 'dist\LimoPcBuildSheetManager.exe')
 )
 
 $ErrorActionPreference = 'Stop'

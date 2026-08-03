@@ -1,4 +1,4 @@
-# 离墨电脑配件采集助手
+# 离墨电脑配置单管理助手
 
 Windows 桌面工具，用于管理 DIY 电脑配件型号、供应商报价、手动价格单，并同步到 Excel 宏报价单。
 
@@ -8,7 +8,7 @@ V2.4。已取消京东及其他平台的自动采集、登录、验证和后台�
 
 ## 界面预览
 
-![离墨电脑配件采集助手主界面](docs/images/app-overview.png)
+![离墨电脑配置单管理助手主界面](docs/images/app-overview.png)
 
 ![Excel 配置报价单](docs/images/quote-sheet.png)
 
@@ -52,9 +52,9 @@ V2.4。已取消京东及其他平台的自动采集、登录、验证和后台�
 .\build.ps1
 ```
 
-生成的程序位于 `dist/LimoPcQuoteAssistant.exe`。完整运行还需要将 Python 运行环境放在程序目录的 `runtime/` 中；普通用户建议直接下载 GitHub Releases 中的完整发布包。
+生成的程序位于 `dist/LimoPcBuildSheetManager.exe`。完整运行还需要将 Python 运行环境放在程序目录的 `runtime/` 中；普通用户建议直接下载 GitHub Releases 中的完整发布包。
 
-发布包下载地址：[GitHub Releases](https://github.com/limonet003/limo-pc-quote-assistant/releases)
+发布包下载地址：[GitHub Releases](https://github.com/limonet003/limo-pc-build-sheet-manager/releases)
 
 ## 版权和许可
 
