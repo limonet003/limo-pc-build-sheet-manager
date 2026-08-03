@@ -1,0 +1,21 @@
+# 本机配置和运行数据
+config.json
+电脑配件数据库.db
+*.db-shm
+*.db-wal
+备份/
+__pycache__/
+*.log
+*.tmp
+
+# 本机构建产物
+*.exe
+runtime/
+dist/
+
+# Excel 临时文件和用户报价数据
+报价单/*
+!报价单/
+!报价单/离墨DIY电脑装机配置报价单.xlsm
+~$*.xls*
+*.xlsm.bak
